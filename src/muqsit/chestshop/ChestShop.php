@@ -41,11 +41,13 @@ final class ChestShop{
 						$player->sendMessage(TextFormat::RED . $e->getMessage());
 						return;
 					}
-					foreach($this->getCategories() as $cat){
-						if(!$cat instanceof Category){
-							return;
-						}
-					if($cat->getName() === "Quest Tier 1"){	
+			//		foreach($this->getCategories() as $cat){
+			//			if(!$cat instanceof Category){
+			//				return;
+			//			}
+					$cat = $button->getCategory();
+			
+					if($cat === "Quest Tier 1"){	
 if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
 	return;
@@ -56,7 +58,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						$player->sendMessage(TextFormat::RED . "This category is empty.");
 					}
 }
-					if($cat->getName() === "Quest Tier 2"){
+					if($cat === "Quest Tier 2"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 2){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 2 to obtain this category.");
 							return;
@@ -67,7 +69,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						$player->sendMessage(TextFormat::RED . "This category is empty.");
 						}
 }
-					if($cat->getName() === "Quest Tier 3"){
+					if($cat === "Quest Tier 3"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 3){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 3 to obtain this category.");
 							return;
@@ -78,7 +80,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						$player->sendMessage(TextFormat::RED . "This category is empty.");
 						}
 }
-					if($cat->getName() === "Quest Tier 2"){
+					if($cat === "Quest Tier 4"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 4){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 4 to obtain this category.");
 							return;
@@ -91,7 +93,6 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						}
 				
 					   }
-}
 			}));
 	}
 
