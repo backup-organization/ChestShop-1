@@ -73,7 +73,8 @@ final class Loader extends PluginBase{
 
 		if(isset($args[0])){
 			try{
-						$category = $this->chest_shop->getCategory($args[0]);
+				$name = implode(" ", array_slice($args, 0));
+						$category = $this->chest_shop->getCategory($name);
 					}catch(\InvalidArgumentException $e){
 						$sender->sendMessage(TextFormat::RED . $e->getMessage());
 						return true;
