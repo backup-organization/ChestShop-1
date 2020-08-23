@@ -16,6 +16,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
+use RedCraftPE\RedSkyBlock\SkyBlock;
 use pocketmine\utils\TextFormat;
 
 final class Loader extends PluginBase{
