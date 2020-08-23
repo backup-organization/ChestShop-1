@@ -71,7 +71,110 @@ final class Loader extends PluginBase{
 		}
 
 		if(isset($args[0])){
+			try{
+						$category = $this->chest_shop->getCategory($args[0]);
+					}catch(\InvalidArgumentException $e){
+						$player->sendMessage(TextFormat::RED . $e->getMessage());
+						return true;
+					}
+			/*$cat = $args[0];
+			
+					if($cat === "Quest Tier 1"){	
+if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
+	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
+	return true;
+}
+				
+					if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+					}
+}
+					if($cat === "Quest Tier 2"){
+						if(SkyBlock::getInstance()->getQuestLevel($player) < 2){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 2 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+						}
+}
+					if($cat === "Quest Tier 3"){
+						if(SkyBlock::getInstance()->getQuestLevel($player) < 3){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 3 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+						}
+}
+					if($cat === "Quest Tier 4"){
+						if(SkyBlock::getInstance()->getQuestLevel($player) < 4){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 4 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+							return true;
+}
+						}
+				
+					   
+*/
 			switch($args[0]){
+				case "Quest Tier 1":
+					if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
+	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
+	return true;
+}
+				
+					if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+					}
+						return true;
+					
+				case "Quest Tier 2":
+					if(SkyBlock::getInstance()->getQuestLevel($player) < 2){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 2 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+						}
+					return true;
+				case "Quest Tier 3":
+					if(SkyBlock::getInstance()->getQuestLevel($player) < 3){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 3 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+						
+						}
+					return true;
+				case "Quest Tier 4":
+					if(SkyBlock::getInstance()->getQuestLevel($player) < 4){
+							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 4 to obtain this category.");
+							return true;
+						}
+					
+						if(!$category->send($player)){
+						$player->removeWindow($transaction->getAction()->getInventory());
+						$player->sendMessage(TextFormat::RED . "This category is empty.");
+						
+						}
+					return true;
 				case "addcat":
 				case "addcategory":
 					if($sender->hasPermission("chestshop.command.add")){
