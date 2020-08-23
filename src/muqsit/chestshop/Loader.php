@@ -130,7 +130,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 					   
 */
 			$player = $sender;
-			switch($args[0]){
+			switch($name){
 				case "Quest Tier 1":
 					if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
@@ -178,6 +178,9 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						
 						}
 					return true;
+			}
+			return false;
+					switch($ars[0]){
 				case "addcat":
 				case "addcategory":
 					if($sender->hasPermission("chestshop.command.add")){
