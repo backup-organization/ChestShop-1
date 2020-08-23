@@ -70,11 +70,12 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 							return;
 						}
 					}
+					}
 					if(!$category->send($player)){
 						$player->removeWindow($transaction->getAction()->getInventory());
 						$player->sendMessage(TextFormat::RED . "This category is empty.");
 					}
-				}
+				
 					   }
 			}));
 	}
