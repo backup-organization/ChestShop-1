@@ -75,7 +75,7 @@ final class Loader extends PluginBase{
 			try{
 						$category = $this->chest_shop->getCategory($args[0]);
 					}catch(\InvalidArgumentException $e){
-						$player->sendMessage(TextFormat::RED . $e->getMessage());
+						$sender->sendMessage(TextFormat::RED . $e->getMessage());
 						return true;
 					}
 			/*$cat = $args[0];
