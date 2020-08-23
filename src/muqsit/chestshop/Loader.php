@@ -128,6 +128,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 				
 					   
 */
+			$player = $sender;
 			switch($args[0]){
 				case "Quest Tier 1":
 					if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
