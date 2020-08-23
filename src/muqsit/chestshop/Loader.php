@@ -180,7 +180,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 					return true;
 			}
 			return false;*/
-					switch($ars[0]){
+					switch($args[0]){
 				case "addcat":
 				case "addcategory":
 					if($sender->hasPermission("chestshop.command.add")){
