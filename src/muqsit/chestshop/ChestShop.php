@@ -47,19 +47,19 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 	return;
 }
 					}
-					if($category->getName() === "Quest Tier 2"){
+					if($button->getCategory()->getName() === "Quest Tier 2"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 2){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 2 to obtain this category.");
 							return;
 						}
 					}
-					if($category->getName() === "Quest Tier 3"){
+					if($button->getCategory()->getName() === "Quest Tier 3"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 3){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 3 to obtain this category.");
 							return;
 						}
 					}
-					if($category->getName() === "Quest Tier 2"){
+					if($button->getCategory()->getName() === "Quest Tier 2"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 4){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 4 to obtain this category.");
 							return;
