@@ -58,7 +58,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 							return;
 						}
 					}
-					if(($cat->getName() === "Quest Tier 3"){
+					if($cat->getName() === "Quest Tier 3"){
 						if(SkyBlock::getInstance()->getQuestLevel($player) < 3){
 							$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 3 to obtain this category.");
 							return;
