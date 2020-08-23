@@ -72,7 +72,7 @@ final class Loader extends PluginBase{
 		}
 
 		if(isset($args[0])){
-			try{
+		/*	try{
 				$name = implode(" ", array_slice($args, 0));
 						$category = $this->chest_shop->getCategory($name);
 					}catch(\InvalidArgumentException $e){
@@ -130,7 +130,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 					   
 */
 			$player = $sender;
-			switch($name){
+			/*switch($name){
 				case "Quest Tier 1":
 					if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
@@ -179,7 +179,7 @@ if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 						}
 					return true;
 			}
-			return false;
+			return false;*/
 					switch($ars[0]){
 				case "addcat":
 				case "addcategory":
