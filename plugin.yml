@@ -1,6 +1,6 @@
 name: ChestShop
 main: muqsit\chestshop\Loader
-api: 3.11.1
+api: 3.12.0
 version: 5.1.0
 commands:
   chestshop:
