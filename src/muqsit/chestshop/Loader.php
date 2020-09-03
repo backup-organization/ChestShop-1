@@ -80,7 +80,7 @@ final class Loader extends PluginBase{
 						return true;
 					}
 			$cat = $args[0];
-			
+			$sender = $player;
 					if($cat === "Quest Tier 1"){	
 if(SkyBlock::getInstance()->getQuestLevel($player) < 1){
 	$player->sendMessage(TextFormat::RED . "You need to pass Quest Level 1 to obtain this category.");
